@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>198499805754-eec9b6vgdire7mfti6ckqhpgiepmslm5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.198499805754-eec9b6vgdire7mfti6ckqhpgiepmslm5</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAaWN4t1pRWjNpwD3_hzu4j6bcm53D_i-M</string>
+	<key>GCM_SENDER_ID</key>
+	<string>198499805754</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.esandova</string>
+	<key>PROJECT_ID</key>
+	<string>fake-ce2ec</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fake-ce2ec.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:198499805754:ios:e1e23c11ee47c22acf2303</string>
+	<key>DATABASE_URL</key>
+	<string>https://fake-ce2ec.firebaseio.com</string>
+</dict>
+</plist>
