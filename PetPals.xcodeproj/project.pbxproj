@@ -11,7 +11,6 @@
 		0D2E74842346CF8400B01BC8 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E74832346CF8400B01BC8 /* Storyboard.storyboard */; };
 		0D2E74862346D0A200B01BC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E74852346D0A200B01BC8 /* Main.storyboard */; };
 		0D2E7488234D68C400B01BC8 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E7487234D68C400B01BC8 /* CustomCell.swift */; };
-		0D2E748A234D69EB00B01BC8 /* RemindersTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E7489234D69EB00B01BC8 /* RemindersTableTableViewController.swift */; };
 		327869D72353C57200A8A2AB /* PetPalsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 327869D62353C57200A8A2AB /* PetPalsIcon.png */; };
 		327869DB2353D4A700A8A2AB /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327869DA2353D4A700A8A2AB /* AdminLoginViewController.swift */; };
 		327869DD2353D7D000A8A2AB /* AdminRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327869DC2353D7D000A8A2AB /* AdminRegisterViewController.swift */; };
@@ -34,7 +33,6 @@
 		0D2E74832346CF8400B01BC8 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		0D2E74852346D0A200B01BC8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0D2E7487234D68C400B01BC8 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		0D2E7489234D69EB00B01BC8 /* RemindersTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersTableTableViewController.swift; sourceTree = "<group>"; };
 		29E0D8E61283500FC9C5B87B /* Pods-PetPals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetPals.debug.xcconfig"; path = "Target Support Files/Pods-PetPals/Pods-PetPals.debug.xcconfig"; sourceTree = "<group>"; };
 		327869D62353C57200A8A2AB /* PetPalsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PetPalsIcon.png; path = ../../../../Downloads/PetPalsIcon.png; sourceTree = "<group>"; };
 		327869DA2353D4A700A8A2AB /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +67,6 @@
 		32F68F88232711DA0035DC53 = {
 			isa = PBXGroup;
 			children = (
-				32FFDD762364912500EA9AE4 /* RemindersTableViewController.swift */,
 				32F68F93232711DA0035DC53 /* PetPals */,
 				32F68F92232711DA0035DC53 /* Products */,
 				C0D3110409EA6D266070B452 /* Pods */,
@@ -96,10 +93,10 @@
 				32C61BB6232D890000D68BE5 /* LoginViewController.swift */,
 				0D2E74852346D0A200B01BC8 /* Main.storyboard */,
 				327869DE2353DB2000A8A2AB /* RegisterViewController.swift */,
+				32FFDD762364912500EA9AE4 /* RemindersTableViewController.swift */,
 				327869DA2353D4A700A8A2AB /* AdminLoginViewController.swift */,
 				327869DC2353D7D000A8A2AB /* AdminRegisterViewController.swift */,
 				0D2E7487234D68C400B01BC8 /* CustomCell.swift */,
-				0D2E7489234D69EB00B01BC8 /* RemindersTableTableViewController.swift */,
 				32F68F9D232711DD0035DC53 /* Assets.xcassets */,
 				327869D62353C57200A8A2AB /* PetPalsIcon.png */,
 				32F68F9F232711DD0035DC53 /* LaunchScreen.storyboard */,
@@ -249,7 +246,6 @@
 				32FFDD772364912500EA9AE4 /* RemindersTableViewController.swift in Sources */,
 				327869DF2353DB2000A8A2AB /* RegisterViewController.swift in Sources */,
 				32C61BB7232D890000D68BE5 /* LoginViewController.swift in Sources */,
-				0D2E748A234D69EB00B01BC8 /* RemindersTableTableViewController.swift in Sources */,
 				327869DB2353D4A700A8A2AB /* AdminLoginViewController.swift in Sources */,
 				32F68F99232711DA0035DC53 /* SecondViewController.swift in Sources */,
 				32F68F95232711DA0035DC53 /* AppDelegate.swift in Sources */,
