@@ -9,6 +9,17 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+
+struct Reminder {
+    
+    var id : Int
+    var title : String
+    var text : String
+    var image : String
+    
+}
+
+
 class FirstViewController: UIViewController, UITableViewDelegate,UITableViewDataSource{
     var data = [CellData]()
     
@@ -21,6 +32,12 @@ class FirstViewController: UIViewController, UITableViewDelegate,UITableViewData
         cell.reminderTitle = data[indexPath.row].reminderTitle
         cell.dueDate = data[indexPath.row].dueDate
         return cell
+    }
+    
+    class ReminderTableViewCell: UITableViewCell {
+        @IBOutlet weak var titleLbl: UILabel!
+        @IBOutlet weak var textLbl: UILabel!
+        @IBOutlet weak var reminderImg: UIImageView!
     }
     
     

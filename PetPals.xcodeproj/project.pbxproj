@@ -24,6 +24,7 @@
 		32F68F9E232711DD0035DC53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32F68F9D232711DD0035DC53 /* Assets.xcassets */; };
 		32F68FA1232711DD0035DC53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32F68F9F232711DD0035DC53 /* LaunchScreen.storyboard */; };
 		32F68FA923271A230035DC53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32F68FA823271A230035DC53 /* GoogleService-Info.plist */; };
+		32FFDD772364912500EA9AE4 /* RemindersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FFDD762364912500EA9AE4 /* RemindersTableViewController.swift */; };
 		897C055587933E826E44EE34 /* Pods_PetPals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B0F6487EA7D7418D18C840 /* Pods_PetPals.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		32F68FA0232711DD0035DC53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32F68FA2232711DD0035DC53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32F68FA823271A230035DC53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		32FFDD762364912500EA9AE4 /* RemindersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersTableViewController.swift; sourceTree = "<group>"; };
 		A4B0F6487EA7D7418D18C840 /* Pods_PetPals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetPals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -67,6 +69,7 @@
 		32F68F88232711DA0035DC53 = {
 			isa = PBXGroup;
 			children = (
+				32FFDD762364912500EA9AE4 /* RemindersTableViewController.swift */,
 				32F68F93232711DA0035DC53 /* PetPals */,
 				32F68F92232711DA0035DC53 /* Products */,
 				C0D3110409EA6D266070B452 /* Pods */,
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32C61BB9232D8A6000D68BE5 /* HomeViewController.swift in Sources */,
+				32FFDD772364912500EA9AE4 /* RemindersTableViewController.swift in Sources */,
 				327869DF2353DB2000A8A2AB /* RegisterViewController.swift in Sources */,
 				32C61BB7232D890000D68BE5 /* LoginViewController.swift in Sources */,
 				0D2E748A234D69EB00B01BC8 /* RemindersTableTableViewController.swift in Sources */,

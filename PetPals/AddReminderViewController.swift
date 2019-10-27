@@ -8,13 +8,15 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 import FirebaseFirestore
 
 class AddReminderViewController: UIViewController {
 
     @IBOutlet weak var txtReminderTitle: UITextField!
     
- 
+    @IBOutlet weak var addReminderBtn: UIButton!
+    
     
     @IBOutlet weak var segCReminderAction: UISegmentedControl!
     
@@ -22,7 +24,6 @@ class AddReminderViewController: UIViewController {
         addReminder()
     }
     
-    @IBOutlet weak var lblErrorMessage: UILabel!
     
     //when an option in the segmented control is selected the value of the variable 'action' that will be stored in the db is changed
     @IBAction func segCReminderActionChange(_ sender: UISegmentedControl) {
@@ -47,7 +48,8 @@ class AddReminderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //WILL NEED TO SET THE MINIMUM DATES AND TIMES OF THE PICKERS TO NOW
+        
+        addReminderBtn.layer.cornerRadius = 15
     }
     
     func addReminder(){
@@ -55,9 +57,10 @@ class AddReminderViewController: UIViewController {
         
 //        //write to the db
         let db = Firestore.firestore()
+        let uid = Auth.auth().currentUser?.uid
         let reminderRef = db.collection("Reminders")
         reminderRef.addDocument(data: [
-            "petOwnerID":"developerEVS",
+            "petOwnerID":uid!,
             "reminderTime ":timePReminderTime.date.description,
             "reminderDate":datePReminderDate.date.description,
             "reminderTitle":txtReminderTitle.text!,
