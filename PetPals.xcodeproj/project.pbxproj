@@ -12,7 +12,6 @@
 		0D2E74862346D0A200B01BC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E74852346D0A200B01BC8 /* Main.storyboard */; };
 		0D2E7488234D68C400B01BC8 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E7487234D68C400B01BC8 /* CustomCell.swift */; };
 		0D2E748A234D69EB00B01BC8 /* RemindersTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E7489234D69EB00B01BC8 /* RemindersTableTableViewController.swift */; };
-		327869D72353C57200A8A2AB /* PetPalsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 327869D62353C57200A8A2AB /* PetPalsIcon.png */; };
 		327869DB2353D4A700A8A2AB /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327869DA2353D4A700A8A2AB /* AdminLoginViewController.swift */; };
 		327869DD2353D7D000A8A2AB /* AdminRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327869DC2353D7D000A8A2AB /* AdminRegisterViewController.swift */; };
 		327869DF2353DB2000A8A2AB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327869DE2353DB2000A8A2AB /* RegisterViewController.swift */; };
@@ -35,7 +34,6 @@
 		0D2E7487234D68C400B01BC8 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		0D2E7489234D69EB00B01BC8 /* RemindersTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersTableTableViewController.swift; sourceTree = "<group>"; };
 		29E0D8E61283500FC9C5B87B /* Pods-PetPals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetPals.debug.xcconfig"; path = "Target Support Files/Pods-PetPals/Pods-PetPals.debug.xcconfig"; sourceTree = "<group>"; };
-		327869D62353C57200A8A2AB /* PetPalsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PetPalsIcon.png; path = ../../../../Downloads/PetPalsIcon.png; sourceTree = "<group>"; };
 		327869DA2353D4A700A8A2AB /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
 		327869DC2353D7D000A8A2AB /* AdminRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminRegisterViewController.swift; sourceTree = "<group>"; };
 		327869DE2353DB2000A8A2AB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				0D2E7487234D68C400B01BC8 /* CustomCell.swift */,
 				0D2E7489234D69EB00B01BC8 /* RemindersTableTableViewController.swift */,
 				32F68F9D232711DD0035DC53 /* Assets.xcassets */,
-				327869D62353C57200A8A2AB /* PetPalsIcon.png */,
 				32F68F9F232711DD0035DC53 /* LaunchScreen.storyboard */,
 				32F68FA823271A230035DC53 /* GoogleService-Info.plist */,
 				32F68FA2232711DD0035DC53 /* Info.plist */,
@@ -188,7 +185,6 @@
 				0D2E74862346D0A200B01BC8 /* Main.storyboard in Resources */,
 				0D2E74842346CF8400B01BC8 /* Storyboard.storyboard in Resources */,
 				32F68FA923271A230035DC53 /* GoogleService-Info.plist in Resources */,
-				327869D72353C57200A8A2AB /* PetPalsIcon.png in Resources */,
 				32F68F9E232711DD0035DC53 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
