@@ -195,7 +195,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oR7-nR-KTR">
-                                            <rect key="frame" x="146" y="43" width="36" height="27"/>
+                                            <rect key="frame" x="146" y="43" width="119" height="27"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -203,24 +203,16 @@
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" red="0.93725490196078431" green="0.58431372549019611" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <connections>
-                                        <outlet property="RemImg" destination="dVq-m1-SUM" id="6Xa-u0-aYX"/>
-                                        <outlet property="SubtitleLbl" destination="oR7-nR-KTR" id="lz6-uq-3OX"/>
-                                        <outlet property="TitleLbl" destination="Ue8-J7-4JQ" id="b1E-jq-nsl"/>
-                                    </connections>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="RemImg" destination="dVq-m1-SUM" id="5Wm-pW-qcT"/>
-                                    <outlet property="SubtitleLbl" destination="oR7-nR-KTR" id="YSK-Od-6ax"/>
-                                    <outlet property="TitleLbl" destination="Ue8-J7-4JQ" id="Cx7-5b-0Z2"/>
+                                    <outlet property="RemImg" destination="dVq-m1-SUM" id="Tzy-tG-DJH"/>
+                                    <outlet property="SubtitleLbl" destination="oR7-nR-KTR" id="8QI-ZE-JoR"/>
+                                    <outlet property="TitleLbl" destination="Ue8-J7-4JQ" id="tBp-XV-9fb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
                         <connections>
-                            <outlet property="RemImg" destination="dVq-m1-SUM" id="E7B-Dd-yRS"/>
-                            <outlet property="SubtitleLbl" destination="oR7-nR-KTR" id="QsJ-DX-Mgv"/>
-                            <outlet property="TitleLbl" destination="Ue8-J7-4JQ" id="fZq-6L-kZv"/>
                             <outlet property="dataSource" destination="cJe-1U-AI4" id="jCB-vW-5iv"/>
                             <outlet property="delegate" destination="cJe-1U-AI4" id="wLV-aG-Oht"/>
                         </connections>
@@ -229,7 +221,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dqy-Zh-WIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="563"/>
+            <point key="canvasLocation" x="-42.028985507246382" y="562.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="8NO-DZ-j0Y">

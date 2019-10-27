@@ -13,9 +13,9 @@ import FirebaseFirestore
 
 class ReminderTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var RemImg: UIImageView!
     @IBOutlet weak var TitleLbl: UILabel!
     @IBOutlet weak var SubtitleLbl: UILabel!
-    @IBOutlet weak var RemImg: UIImageView!
     
 }
 
