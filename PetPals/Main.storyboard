@@ -10,65 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Reminders-->
-        <scene sceneID="hNz-n2-bh7">
-            <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="PetPals" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reminders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXN-Vl-zwO">
-                                <rect key="frame" x="166" y="59" width="82" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Jr-pn-BzL">
-                                <rect key="frame" x="364" y="108" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="+"/>
-                                <connections>
-                                    <action selector="btnAddReminder:" destination="9pv-A4-QxB" eventType="touchUpInside" id="w89-y3-xkT"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EVf-oc-d6o">
-                                <rect key="frame" x="0.0" y="88" width="414" height="671"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="131" id="XEY-On-uKu">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="131"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XEY-On-uKu" id="hx6-uK-fkA">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="130.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.90980392160000001" green="0.40784313729999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <outlet property="reminderImg" destination="dVq-m1-SUM" id="5YD-4U-hSH"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="ZMJ-Ld-Qy3"/>
-                                    <outlet property="delegate" destination="9pv-A4-QxB" id="Qrm-h0-0Xh"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Reminders" image="icons8-calendar-plus-50" selectedImage="icons8-calendar-plus-50" id="acW-dT-cKf"/>
-                    <connections>
-                        <outlet property="tblReminders" destination="EVf-oc-d6o" id="X5G-XJ-msT"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1541" y="1262"/>
-        </scene>
         <!--Reviews-->
         <scene sceneID="i4V-uf-JpA">
             <objects>
@@ -222,111 +163,60 @@
         <scene sceneID="noO-ZY-xsB">
             <objects>
                 <tableViewController id="cJe-1U-AI4" customClass="RemindersTableViewController" customModule="PetPals" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dpo-kR-R2Q">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dpo-kR-R2Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rcn-cT-gri">
-                            <rect key="frame" x="0.0" y="372" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="152" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Add Reminder"/>
                             <connections>
                                 <segue destination="r3z-1s-bCj" kind="show" id="ypU-Ip-cMF"/>
                             </connections>
                         </button>
-                        <sections>
-                            <tableViewSection id="clU-4i-Nfg">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelCell" rowHeight="124" id="YGM-Wn-Q4A">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YGM-Wn-Q4A" id="lLp-Qa-VPJ" customClass="ReminderTableViewCell" customModule="PetPals" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="123.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dVq-m1-SUM">
-                                                    <rect key="frame" x="20" y="6" width="110" height="110"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ue8-J7-4JQ">
-                                                    <rect key="frame" x="146" y="6" width="69" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="25"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oR7-nR-KTR">
-                                                    <rect key="frame" x="146" y="43" width="36" height="27"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.93725490196078431" green="0.58431372549019611" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="124" id="i37-G1-gcs">
-                                        <rect key="frame" x="0.0" y="124" width="414" height="124"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i37-G1-gcs" id="dP5-NA-Lma" customClass="ReminderTableViewCell" customModule="PetPals" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="123.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HtD-5s-YKb">
-                                                    <rect key="frame" x="20" y="6" width="110" height="110"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zB9-2J-k0U">
-                                                    <rect key="frame" x="146" y="6" width="69" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="25"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3o-QG-R6V">
-                                                    <rect key="frame" x="146" y="43" width="36" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.93725490199999995" green="0.58431372550000005" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="124" id="z1z-bt-PkB">
-                                        <rect key="frame" x="0.0" y="248" width="414" height="124"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z1z-bt-PkB" id="4Us-e2-kRO" customClass="ReminderTableViewCell" customModule="PetPals" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="123.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mcj-YR-FZk">
-                                                    <rect key="frame" x="20" y="6" width="110" height="110"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="re8-BA-HxG">
-                                                    <rect key="frame" x="146" y="6" width="69" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="25"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Yk-zR-gGR">
-                                                    <rect key="frame" x="146" y="43" width="36" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.93725490199999995" green="0.58431372550000005" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelCell" rowHeight="124" id="YGM-Wn-Q4A" customClass="ReminderTableViewCell" customModule="PetPals" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="124"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YGM-Wn-Q4A" id="lLp-Qa-VPJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="123.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dVq-m1-SUM">
+                                            <rect key="frame" x="20" y="6" width="110" height="110"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ue8-J7-4JQ">
+                                            <rect key="frame" x="146" y="6" width="69" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oR7-nR-KTR">
+                                            <rect key="frame" x="146" y="43" width="36" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.93725490196078431" green="0.58431372549019611" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <outlet property="RemImg" destination="dVq-m1-SUM" id="6Xa-u0-aYX"/>
+                                        <outlet property="SubtitleLbl" destination="oR7-nR-KTR" id="lz6-uq-3OX"/>
+                                        <outlet property="TitleLbl" destination="Ue8-J7-4JQ" id="b1E-jq-nsl"/>
+                                    </connections>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="RemImg" destination="dVq-m1-SUM" id="5Wm-pW-qcT"/>
+                                    <outlet property="SubtitleLbl" destination="oR7-nR-KTR" id="YSK-Od-6ax"/>
+                                    <outlet property="TitleLbl" destination="Ue8-J7-4JQ" id="Cx7-5b-0Z2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="RemImg" destination="dVq-m1-SUM" id="E7B-Dd-yRS"/>
                             <outlet property="SubtitleLbl" destination="oR7-nR-KTR" id="QsJ-DX-Mgv"/>
@@ -490,7 +380,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="roc-Wn-ipE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1325" y="-627"/>
+            <point key="canvasLocation" x="-2572" y="-627"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="j3N-Ub-dqy">
@@ -501,14 +391,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ACv-Cl-bRB">
-                                <rect key="frame" x="107" y="88" width="200" height="257"/>
+                                <rect key="frame" x="107" y="88" width="200" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PetPalsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Mdg-lg-NK6">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="16"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PetPals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gc4-9H-Pcu">
-                                        <rect key="frame" x="32.5" y="200" width="135" height="57"/>
+                                        <rect key="frame" x="32.5" y="16" width="135" height="57"/>
                                         <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="50"/>
                                         <color key="textColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -538,7 +428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IjS-Ee-Jmx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2249.275362318841" y="1449.7767857142856"/>
+            <point key="canvasLocation" x="-3533" y="1450"/>
         </scene>
         <!--Admin Register View Controller-->
         <scene sceneID="k63-Rk-jMe">
@@ -665,7 +555,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djD-hJ-upS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1510" y="1450"/>
+            <point key="canvasLocation" x="-2572" y="1450"/>
         </scene>
         <!--Admin Login View Controller-->
         <scene sceneID="pjF-cE-1ZQ">
@@ -794,7 +684,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FlG-XQ-8W6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1855.072463768116" y="724.55357142857144"/>
+            <point key="canvasLocation" x="-3071" y="333"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="298-AN-sti">
@@ -915,7 +805,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rKo-xD-ef6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1042" y="725"/>
+            <point key="canvasLocation" x="-2058" y="333"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="TeU-S2-L8F">
@@ -950,7 +840,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6VV-gn-Smu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="-901"/>
+            <point key="canvasLocation" x="3642" y="-674"/>
         </scene>
         <!--Profile-->
         <scene sceneID="wg7-f3-ORb">
@@ -1025,7 +915,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="-901"/>
+            <point key="canvasLocation" x="1046" y="-905"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XBa-Wk-Hqq">
@@ -1043,7 +933,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jl3-hN-pjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3086" y="-23"/>
+            <point key="canvasLocation" x="-3532" y="-627"/>
         </scene>
         <!--Item-->
         <scene sceneID="DPI-ev-jZP">
@@ -1067,7 +957,6 @@
     </scenes>
     <resources>
         <image name="PetPalsIcon" width="200" height="200"/>
-        <image name="icons8-calendar-plus-50" width="50" height="50"/>
         <image name="icons8-dog-bowl-50" width="50" height="50"/>
         <image name="icons8-survey-50" width="50" height="50"/>
         <image name="icons8-waypoint-map-50" width="50" height="50"/>

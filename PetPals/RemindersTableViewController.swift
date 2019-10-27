@@ -11,8 +11,15 @@ import Firebase
 import FirebaseAuth
 import FirebaseFirestore
 
-class RemindersTableViewController: UITableViewController {
+class ReminderTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var TitleLbl: UILabel!
+    @IBOutlet weak var SubtitleLbl: UILabel!
+    @IBOutlet weak var RemImg: UIImageView!
+    
+}
+
+class RemindersTableViewController: UITableViewController {
     struct Reminder {
         
         var title : String
@@ -21,13 +28,6 @@ class RemindersTableViewController: UITableViewController {
         
     }
     
-    class ReminderTableViewCell: UITableViewCell {
-        
-        @IBOutlet weak var TitleLbl: UILabel!
-        @IBOutlet weak var SubtitleLbl: UILabel!
-        @IBOutlet weak var RemImg: UIImageView!
-        
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
