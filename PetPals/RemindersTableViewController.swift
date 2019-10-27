@@ -19,7 +19,11 @@ class ReminderTableViewCell: UITableViewCell {
     
 }
 
+
 class RemindersTableViewController: UITableViewController {
+    var index: Int = 0
+    var reminders: [Reminder] = []
+
     struct Reminder {
         
         var title : String
@@ -29,62 +33,93 @@ class RemindersTableViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+        getReminders()
+        self.tableView.reloadData()
+    }
+    
+    func viewDidAppear()
+    {
+        getReminders()
+    }
+    
+    func getReminders()
+    {
         let db = Firestore.firestore()
-
         
-        let uid = Auth.auth().currentUser?.uid
         
-        db.collection("reminders").whereField("petOwnerID", isEqualTo: uid!).getDocuments() { (querySnapshot, err) in
+        let uid = Auth.auth().currentUser?.uid as! String
+        
+        db.collection("Reminders").whereField("petOwnerID", isEqualTo: uid).getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    let title = document.get("reminderTitle")
-                    let subtitle = document.get("reminderTime")
-                    let type = document.get("reminderType")
+                    print(document)
+                    let title = document.get("reminderTitle") as! String
+                    let subtitle: String? = document.get("reminderTime") as? String
+                    let type = document.get("action") as! String
                     var typeImg = ""
-                    if (type as! String == "call")
+                    if (type   == "call")
                     {
                         typeImg = "icons8-ringing-phone-30.png"
                     }
-                    else if (type as! String == "email" )
+                    else if (type == "email" )
                     {
                         typeImg = "icons8-important-mail-30.png"
                     }
-                    else if (type as! String == "browser")
+                    else if (type == "browser")
                     {
                         typeImg = "icons8-website-30.png"
                     }
                     else{
-                        typeImg = "icons8-calendar-plus-50.png"
+                        typeImg = "icons8-alarm-clock-50.png"
                     }
                     
-                    self.reminders.append(Reminder(title: title as! String, text: subtitle as! String, image: typeImg))
+                    self.reminders.append(Reminder(title: title, text: subtitle ?? "reminder" , image: typeImg))
+                    self.index = self.index + 1
+                    self.tableView.reloadData()
                 }
             }
         }
-        
-    }
-
-    var reminders: [Reminder] = []
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return reminders.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
             as! ReminderTableViewCell
-        
         let reminder = reminders[indexPath.row]
         cell.TitleLbl?.text = reminder.title
         cell.SubtitleLbl?.text = reminder.text
         cell.RemImg?.image = UIImage(named: reminder.image)
         
         return cell
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(reminders)
+        let count: Int = reminders.count
+        print(count)
+        return count
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movedObject = reminders[sourceIndexPath.row]
+        reminders.remove(at: sourceIndexPath.row)
+        reminders.insert(movedObject, at: destinationIndexPath.row)
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.reminders.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
 
 }
