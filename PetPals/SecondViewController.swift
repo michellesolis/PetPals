@@ -8,11 +8,14 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 import FirebaseStorage
 import FirebaseFirestore
 
 class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
-
+    
+    let uid = Auth.auth().currentUser?.uid as! String
+    
     @IBOutlet weak var profileImage: UIImageView!
     let imagePicker = UIImagePickerController()
     
@@ -20,6 +23,7 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
         handleSelectProfileImageView()
     }
     
+    @IBOutlet weak var changeProfilePicBtn: UIButton!
     
     func handleSelectProfileImageView(){
         imagePicker.allowsEditing = true
@@ -34,15 +38,15 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
                 profileImage.image = editedImage
             } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
                 profileImage.image = originalImage
-
+                
             }
             profileImage.contentMode = .scaleAspectFit
-
+            
         }
         dismiss(animated: true, completion: nil)
         uploadImage()
     }
-        
+    
     
     @objc func imagePickerControllerDidCancel(picker: UIImagePickerController){
         print("canceled picker")
@@ -56,7 +60,7 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
                 NSLog("The \"OK\" alert occured.")
             }))
             self.present(alert, animated: true, completion: nil)
-
+            
             //presentAlert(title: "Error", message: "Something went wrong")
             return
         }
@@ -95,7 +99,7 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
                 
                 let databaseRefernece = Firestore.firestore().collection("ProfileImages")
                 databaseRefernece.addDocument(data: [
-                    "userID" : USERID,
+                    "userID" : self.uid,
                     "imageURL" : urlString
                 ]){ err in
                     if let err = err {
@@ -111,15 +115,16 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
             })
         }
         
-
-
+        
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+        changeProfilePicBtn.layer.cornerRadius = 15
         
     }
-
-
+    
+    
 }
 

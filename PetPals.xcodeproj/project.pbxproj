@@ -11,7 +11,7 @@
 		0D2E74842346CF8400B01BC8 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E74832346CF8400B01BC8 /* Storyboard.storyboard */; };
 		0D2E74862346D0A200B01BC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E74852346D0A200B01BC8 /* Main.storyboard */; };
 		0D2E7488234D68C400B01BC8 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E7487234D68C400B01BC8 /* CustomCell.swift */; };
-		0D2E748A234D69EB00B01BC8 /* RemindersTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E7489234D69EB00B01BC8 /* RemindersTableTableViewController.swift */; };
+		32657CDA2367586F004C82EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32657CD92367586F004C82EF /* GoogleService-Info.plist */; };
 		327869DB2353D4A700A8A2AB /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327869DA2353D4A700A8A2AB /* AdminLoginViewController.swift */; };
 		327869DD2353D7D000A8A2AB /* AdminRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327869DC2353D7D000A8A2AB /* AdminRegisterViewController.swift */; };
 		327869DF2353DB2000A8A2AB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327869DE2353DB2000A8A2AB /* RegisterViewController.swift */; };
@@ -22,7 +22,7 @@
 		32F68F99232711DA0035DC53 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F68F98232711DA0035DC53 /* SecondViewController.swift */; };
 		32F68F9E232711DD0035DC53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32F68F9D232711DD0035DC53 /* Assets.xcassets */; };
 		32F68FA1232711DD0035DC53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32F68F9F232711DD0035DC53 /* LaunchScreen.storyboard */; };
-		32F68FA923271A230035DC53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32F68FA823271A230035DC53 /* GoogleService-Info.plist */; };
+		32FFDD772364912500EA9AE4 /* RemindersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FFDD762364912500EA9AE4 /* RemindersTableViewController.swift */; };
 		897C055587933E826E44EE34 /* Pods_PetPals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B0F6487EA7D7418D18C840 /* Pods_PetPals.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,8 +32,8 @@
 		0D2E74832346CF8400B01BC8 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		0D2E74852346D0A200B01BC8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0D2E7487234D68C400B01BC8 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		0D2E7489234D69EB00B01BC8 /* RemindersTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersTableTableViewController.swift; sourceTree = "<group>"; };
 		29E0D8E61283500FC9C5B87B /* Pods-PetPals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetPals.debug.xcconfig"; path = "Target Support Files/Pods-PetPals/Pods-PetPals.debug.xcconfig"; sourceTree = "<group>"; };
+		32657CD92367586F004C82EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		327869DA2353D4A700A8A2AB /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
 		327869DC2353D7D000A8A2AB /* AdminRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminRegisterViewController.swift; sourceTree = "<group>"; };
 		327869DE2353DB2000A8A2AB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		32F68F9D232711DD0035DC53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32F68FA0232711DD0035DC53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32F68FA2232711DD0035DC53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		32F68FA823271A230035DC53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		32FFDD762364912500EA9AE4 /* RemindersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersTableViewController.swift; sourceTree = "<group>"; };
 		A4B0F6487EA7D7418D18C840 /* Pods_PetPals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetPals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,13 +91,13 @@
 				32C61BB6232D890000D68BE5 /* LoginViewController.swift */,
 				0D2E74852346D0A200B01BC8 /* Main.storyboard */,
 				327869DE2353DB2000A8A2AB /* RegisterViewController.swift */,
+				32FFDD762364912500EA9AE4 /* RemindersTableViewController.swift */,
 				327869DA2353D4A700A8A2AB /* AdminLoginViewController.swift */,
 				327869DC2353D7D000A8A2AB /* AdminRegisterViewController.swift */,
 				0D2E7487234D68C400B01BC8 /* CustomCell.swift */,
-				0D2E7489234D69EB00B01BC8 /* RemindersTableTableViewController.swift */,
 				32F68F9D232711DD0035DC53 /* Assets.xcassets */,
 				32F68F9F232711DD0035DC53 /* LaunchScreen.storyboard */,
-				32F68FA823271A230035DC53 /* GoogleService-Info.plist */,
+				32657CD92367586F004C82EF /* GoogleService-Info.plist */,
 				32F68FA2232711DD0035DC53 /* Info.plist */,
 				0D2E74832346CF8400B01BC8 /* Storyboard.storyboard */,
 			);
@@ -183,8 +183,8 @@
 			files = (
 				32F68FA1232711DD0035DC53 /* LaunchScreen.storyboard in Resources */,
 				0D2E74862346D0A200B01BC8 /* Main.storyboard in Resources */,
+				32657CDA2367586F004C82EF /* GoogleService-Info.plist in Resources */,
 				0D2E74842346CF8400B01BC8 /* Storyboard.storyboard in Resources */,
-				32F68FA923271A230035DC53 /* GoogleService-Info.plist in Resources */,
 				32F68F9E232711DD0035DC53 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,9 +239,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				32C61BB9232D8A6000D68BE5 /* HomeViewController.swift in Sources */,
+				32FFDD772364912500EA9AE4 /* RemindersTableViewController.swift in Sources */,
 				327869DF2353DB2000A8A2AB /* RegisterViewController.swift in Sources */,
 				32C61BB7232D890000D68BE5 /* LoginViewController.swift in Sources */,
-				0D2E748A234D69EB00B01BC8 /* RemindersTableTableViewController.swift in Sources */,
 				327869DB2353D4A700A8A2AB /* AdminLoginViewController.swift in Sources */,
 				32F68F99232711DA0035DC53 /* SecondViewController.swift in Sources */,
 				32F68F95232711DA0035DC53 /* AppDelegate.swift in Sources */,
