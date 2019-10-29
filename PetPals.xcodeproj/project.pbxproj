@@ -11,7 +11,7 @@
 		0D2E74842346CF8400B01BC8 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E74832346CF8400B01BC8 /* Storyboard.storyboard */; };
 		0D2E74862346D0A200B01BC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E74852346D0A200B01BC8 /* Main.storyboard */; };
 		0D2E7488234D68C400B01BC8 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E7487234D68C400B01BC8 /* CustomCell.swift */; };
-		32657CDA2367586F004C82EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32657CD92367586F004C82EF /* GoogleService-Info.plist */; };
+		0DD990D72367F323001144EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DD990D62367F323001144EB /* GoogleService-Info.plist */; };
 		327869DB2353D4A700A8A2AB /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327869DA2353D4A700A8A2AB /* AdminLoginViewController.swift */; };
 		327869DD2353D7D000A8A2AB /* AdminRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327869DC2353D7D000A8A2AB /* AdminRegisterViewController.swift */; };
 		327869DF2353DB2000A8A2AB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327869DE2353DB2000A8A2AB /* RegisterViewController.swift */; };
@@ -32,8 +32,8 @@
 		0D2E74832346CF8400B01BC8 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		0D2E74852346D0A200B01BC8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0D2E7487234D68C400B01BC8 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		0DD990D62367F323001144EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		29E0D8E61283500FC9C5B87B /* Pods-PetPals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetPals.debug.xcconfig"; path = "Target Support Files/Pods-PetPals/Pods-PetPals.debug.xcconfig"; sourceTree = "<group>"; };
-		32657CD92367586F004C82EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		327869DA2353D4A700A8A2AB /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
 		327869DC2353D7D000A8A2AB /* AdminRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminRegisterViewController.swift; sourceTree = "<group>"; };
 		327869DE2353DB2000A8A2AB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -94,10 +94,10 @@
 				32FFDD762364912500EA9AE4 /* RemindersTableViewController.swift */,
 				327869DA2353D4A700A8A2AB /* AdminLoginViewController.swift */,
 				327869DC2353D7D000A8A2AB /* AdminRegisterViewController.swift */,
+				0DD990D62367F323001144EB /* GoogleService-Info.plist */,
 				0D2E7487234D68C400B01BC8 /* CustomCell.swift */,
 				32F68F9D232711DD0035DC53 /* Assets.xcassets */,
 				32F68F9F232711DD0035DC53 /* LaunchScreen.storyboard */,
-				32657CD92367586F004C82EF /* GoogleService-Info.plist */,
 				32F68FA2232711DD0035DC53 /* Info.plist */,
 				0D2E74832346CF8400B01BC8 /* Storyboard.storyboard */,
 			);
@@ -183,7 +183,7 @@
 			files = (
 				32F68FA1232711DD0035DC53 /* LaunchScreen.storyboard in Resources */,
 				0D2E74862346D0A200B01BC8 /* Main.storyboard in Resources */,
-				32657CDA2367586F004C82EF /* GoogleService-Info.plist in Resources */,
+				0DD990D72367F323001144EB /* GoogleService-Info.plist in Resources */,
 				0D2E74842346CF8400B01BC8 /* Storyboard.storyboard in Resources */,
 				32F68F9E232711DD0035DC53 /* Assets.xcassets in Resources */,
 			);
@@ -388,7 +388,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S33WNUD963;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PetPals/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -407,7 +407,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S33WNUD963;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PetPals/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

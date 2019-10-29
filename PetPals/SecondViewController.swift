@@ -14,6 +14,8 @@ import FirebaseFirestore
 
 class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
+    @IBOutlet weak var btnLogout: UIButton!
+    
     let uid = Auth.auth().currentUser?.uid as! String
     
     @IBOutlet weak var profileImage: UIImageView!
@@ -122,9 +124,24 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
         super.viewDidLoad()
         imagePicker.delegate = self
         changeProfilePicBtn.layer.cornerRadius = 15
+        btnLogout.layer.cornerRadius = 15
         
     }
     
+    @IBAction func logout(_ sender: UIButton) {
+        do { try Auth.auth().signOut()
+        } catch {
+            let alert = UIAlertController(title: "Error", message: "Problem logging out.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
+            
+            return
+        }
+        
+         self.performSegue(withIdentifier: "logout", sender: self)
+    }
     
 }
 
