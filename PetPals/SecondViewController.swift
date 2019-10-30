@@ -63,7 +63,7 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
             }))
             self.present(alert, animated: true, completion: nil)
             
-            //presentAlert(title: "Error", message: "Something went wrong")
+            
             return
         }
         
@@ -98,22 +98,40 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
                     return
                 }
                 let urlString = url.absoluteString
-                
-                let databaseRefernece = Firestore.firestore().collection("ProfileImages")
-                databaseRefernece.addDocument(data: [
-                    "userID" : self.uid,
-                    "imageURL" : urlString
-                ]){ err in
+                let databaseReference = Firestore.firestore().collection("Users")
+                databaseReference.whereField("uid", isEqualTo: self.uid).getDocuments { (querySnapshot, err) in
                     if let err = err {
-                        print("Error adding document: \(err)")
+                        print("Error getting documents: \(err)")
                     } else {
-                        let alert = UIAlertController(title: "Success", message: "Image uploaded successfully.", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-                            NSLog("The \"OK\" alert occured.")
-                        }))
-                        self.present(alert, animated: true, completion: nil)
+                        for document in querySnapshot!.documents {
+                            let documentIDNumber = document.documentID
+                            let usersReference = databaseReference.document(documentIDNumber)
+                            usersReference.updateData(["profileImageURL" : urlString]) { err in
+                                if let err = err {
+                                    print("Error updating document: \(err)")
+                                }else {
+                                    print("Document successfully updated.")
+                                }
+                            }
+                        }
                     }
                 }
+                //=======================
+//                let databaseRef = Firestore.firestore().collection("ProfileImages")
+//                databaseRefernece.addDocument(data: [
+//                    "userID" : self.uid,
+//                    "imageURL" : urlString
+//                ]){ err in
+//                    if let err = err {
+//                        print("Error adding document: \(err)")
+//                    } else {
+//                        let alert = UIAlertController(title: "Success", message: "Image uploaded successfully.", preferredStyle: .alert)
+//                        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+//                            NSLog("The \"OK\" alert occured.")
+//                        }))
+//                        self.present(alert, animated: true, completion: nil)
+//                    }
+//                }
             })
         }
         
