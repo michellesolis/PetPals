@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class AddReminderViewController: UIViewController {
-
+    
     @IBOutlet weak var txtReminderTitle: UITextField!
     
     @IBOutlet weak var addReminderBtn: UIButton!
@@ -55,7 +55,7 @@ class AddReminderViewController: UIViewController {
     func addReminder(){
         //NEED TO CHECK THAT TEXT FIELDS ARE POPULATED FIRST
         
-//        //write to the db
+        //        //write to the db
         let db = Firestore.firestore()
         let uid = Auth.auth().currentUser?.uid
         let reminderRef = db.collection("Reminders")
@@ -66,7 +66,8 @@ class AddReminderViewController: UIViewController {
             "reminderTitle":txtReminderTitle.text!,
             "dueDate":datePDueDate.date.description,
             "action":action,
-            "isComplete":false
+            "isComplete":false,
+            "isDeleted":false
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
@@ -79,23 +80,23 @@ class AddReminderViewController: UIViewController {
         
         //let ref = Database.database().reference().child("reminder")
         //let childRef = ref.childByAutoId()
-//        reminderRef.document(firestore/autoID).setData([
-//            "reminderTime ":timePReminderTime.date.description,
-//            "reminderDate":datePDueDate.date.description,
-//            "reminderTitle":txtReminderTitle.text!,
-//            "dueDate":datePDueDate.date.description,
-//            "action":action,
-//            "isComplete":false
-//            ])
-
-
-
-//        let value = ["petOwnerID":"developerEVS","reminderTime ":timePReminderTime.date.description, "reminderDate":datePDueDate.date.description, "reminderTitle":txtReminderTitle.text!, "dueDate":datePDueDate.date.description, "action":action, "isComplete":false] as [String : Any]
-//        childRef.updateChildValues(value)
-//        
-
+        //        reminderRef.document(firestore/autoID).setData([
+        //            "reminderTime ":timePReminderTime.date.description,
+        //            "reminderDate":datePDueDate.date.description,
+        //            "reminderTitle":txtReminderTitle.text!,
+        //            "dueDate":datePDueDate.date.description,
+        //            "action":action,
+        //            "isComplete":false
+        //            ])
+        
+        
+        
+        //        let value = ["petOwnerID":"developerEVS","reminderTime ":timePReminderTime.date.description, "reminderDate":datePDueDate.date.description, "reminderTitle":txtReminderTitle.text!, "dueDate":datePDueDate.date.description, "action":action, "isComplete":false] as [String : Any]
+        //        childRef.updateChildValues(value)
+        //
+        
     }
-
+    
     func clearTextFields(){
         
     }

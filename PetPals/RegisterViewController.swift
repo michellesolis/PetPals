@@ -40,7 +40,7 @@ class RegisterViewController: UIViewController, UIAlertViewDelegate {
                     
                     //user saved successfully
                     let db = Firestore.firestore()
-                    db.collection("Users").addDocument(data: ["firstName": firstName, "lastName": lastName, "uid": result!.user.uid])
+                    db.collection("Users").addDocument(data: ["employeeCode" : "", "firstName": firstName, "lastName": lastName, "uid": result!.user.uid, "profileImageURL" : ""])
                     { (error) in
                         
                         if error != nil
