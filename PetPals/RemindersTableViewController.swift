@@ -19,6 +19,8 @@ class ReminderTableViewCell: UITableViewCell {
     
 }
 
+let db = Firestore.firestore()
+
 
 class RemindersTableViewController: UITableViewController {
     var index: Int = 0
@@ -26,6 +28,7 @@ class RemindersTableViewController: UITableViewController {
 
     struct Reminder {
         
+        var id : String
         var title : String
         var text : String
         var image : String
@@ -46,7 +49,6 @@ class RemindersTableViewController: UITableViewController {
     
     func getReminders()
     {
-        let db = Firestore.firestore()
         
         
         let uid = Auth.auth().currentUser?.uid as! String
@@ -56,7 +58,7 @@ class RemindersTableViewController: UITableViewController {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    print(document)
+                    let id = document.documentID
                     let title = document.get("reminderTitle") as! String
                     let subtitle: String? = document.get("reminderTime") as? String
                     let type = document.get("action") as! String
@@ -77,12 +79,20 @@ class RemindersTableViewController: UITableViewController {
                         typeImg = "icons8-alarm-clock-50.png"
                     }
                     
-                    self.reminders.append(Reminder(title: title, text: subtitle ?? "reminder" , image: typeImg))
+                    self.reminders.append(Reminder(id: id, title: title, text: subtitle ?? "reminder" , image: typeImg))
                     self.index = self.index + 1
                     self.tableView.reloadData()
                 }
             }
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -101,9 +111,7 @@ class RemindersTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(reminders)
         let count: Int = reminders.count
-        print(count)
         return count
     }
     
@@ -116,6 +124,22 @@ class RemindersTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        let databaseReference = Firestore.firestore().collection("Reminders")
+        
+        let delObject = reminders[indexPath.row]
+        let remID = delObject.id
+        let remReference = databaseReference.document(remID)
+        
+        remReference.updateData([
+            "isDeleted": true
+        ]){ err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            }else {
+                print("Document successfully updated.")
+            }
+        }
         if editingStyle == .delete {
             self.reminders.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
