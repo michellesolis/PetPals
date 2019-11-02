@@ -15,6 +15,11 @@ import FirebaseFirestore
 class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
     @IBOutlet weak var btnLogout: UIButton!
+    @IBOutlet weak var txtFirstName: UITextField!
+    @IBOutlet weak var txtLastName: UITextField!
+    
+    @IBOutlet weak var btnSaveChanges: UIButton!
+    @IBOutlet weak var btnDeleteAccount: UIButton!
     
     let uid = Auth.auth().currentUser?.uid as! String
     
@@ -143,7 +148,10 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
         imagePicker.delegate = self
         changeProfilePicBtn.layer.cornerRadius = 15
         btnLogout.layer.cornerRadius = 15
+        btnSaveChanges.layer.cornerRadius = 15
+        btnDeleteAccount.layer.cornerRadius = 15
         
+        getUserInformation()
     }
     
     @IBAction func logout(_ sender: UIButton) {
@@ -160,6 +168,53 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
         
          self.performSegue(withIdentifier: "logout", sender: self)
     }
+   
+    func getUserInformation(){
+        let db = Firestore.firestore()
+        
+        let uid = Auth.auth().currentUser?.uid as! String
+        
+        db.collection("Users").whereField("uid", isEqualTo: uid).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print(document)
+                    let firstName = document.get("firstName") as! String
+                    let lastName = document.get("lastName") as! String
+                    
+                    self.txtFirstName.text = firstName
+                    self.txtLastName.text = lastName
+                }
+            }
+        }
+    }
     
+    @IBAction func btnSaveChanges(_ sender: UIButton) {
+        let fName = txtFirstName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let lName = txtLastName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        let databaseReference = Firestore.firestore().collection("Users")
+        databaseReference.whereField("uid", isEqualTo: uid).getDocuments { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    let documentIDNumber = document.documentID
+                    let usersReference = databaseReference.document(documentIDNumber)
+                    usersReference.updateData(["firstName" : fName, "lastName" : lName]) { err in
+                        if let err = err {
+                            print("Error updating document: \(err)")
+                        }else {
+                            print("Document successfully updated.")
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @IBAction func btnDeleteAccount(_ sender: UIButton) {
+        //SHOW POP UP WHEN CLICKED TO ENSURE USER WANTS TO DELETE THEIR ACCOUNT
+    }
 }
 
